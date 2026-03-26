@@ -1,0 +1,50 @@
+# Dependency directories
+node_modules/
+venv/
+env/
+.venv/
+vendor/
+
+# Build outputs
+dist/
+build/
+target/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+#Claude
+.claude/
+
+#Sonar Context
+.sonar-code-context/

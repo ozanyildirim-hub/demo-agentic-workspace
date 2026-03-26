@@ -19,7 +19,8 @@
 
     <properties>
         <java.version>17</java.version>
-        <!-- Must match SonarCloud: Organization + project key (see Project Information on sonarcloud.io) -->
+        <!-- Keep in sync with .github/workflows/ci.yml -Dsonar.* and SonarCloud project settings -->
+        <sonar.organization>ozanyildirim-hub</sonar.organization>
         <sonar.projectKey>ozanyildirim-hub_demo-agentic-workspace</sonar.projectKey>
         <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>

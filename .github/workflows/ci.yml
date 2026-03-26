@@ -38,15 +38,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
           
-      # Requires: GitHub repo secret SONAR_TOKEN (SonarCloud user token) and a matching
-      # project on https://sonarcloud.io (import this repo; use the org + project key shown there).
-      - name: Build, test, and SonarCloud analysis
+      - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: >-
-          mvn -B verify
-          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-          -Dsonar.organization=ozanyildirim-hub
-          -Dsonar.projectKey=ozanyildirim-hub_demo-agentic-workspace
-          -Dsonar.host.url=https://sonarcloud.io
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=-ozanyildirim-hub_agent-demo-java-security -Dsonar.organization=ozan -Dsonar.host.url=https://sonarcloud.io
